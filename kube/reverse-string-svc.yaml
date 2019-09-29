@@ -16,6 +16,7 @@ spec:
     spec:
       containers:
       - image: reverse-string
+        imagePullPolicy: Never
         name: reverse-string
         ports:
-        - containerPort: 8080
+        - containerPort: 9000
