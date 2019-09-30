@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   labels:
     app: random-num-reverse-str
-  name: random-num-reverse-str-deployment
+  name: random-num-reverse-str
   namespace: default
 spec:
   replicas: 5
