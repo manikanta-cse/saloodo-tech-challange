@@ -2,17 +2,17 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   labels:
-    app: string-reverse-svc
+    app: string-reverse
   name: string-reverse-deployment
 spec:
   replicas: 5
   selector:
     matchLabels:
-      app: string-reverse-svc
+      app: string-reverse
   template:
     metadata:
       labels:        
-        app: string-reverse-svc
+        app: string-reverse
     spec:
       containers:
       - image: string-reverse
