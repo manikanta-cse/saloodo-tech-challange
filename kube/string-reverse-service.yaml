@@ -11,5 +11,5 @@ spec:
   ports:
   - port: 8090
     protocol: TCP
-    nodePort: 30001
-  type: LoadBalancer
+    targetPort: 8080
+  type: ClusterIP
