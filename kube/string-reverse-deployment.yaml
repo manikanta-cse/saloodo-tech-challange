@@ -9,6 +9,11 @@ spec:
   selector:
     matchLabels:
       app: string-reverse
+  strategy:
+    rollingUpdate:
+      maxSurge: 1
+      maxUnavailable: 1
+    type: RollingUpdate
   template:
     metadata:
       labels:        
@@ -20,3 +25,5 @@ spec:
         name: string-reverse
         ports:
         - containerPort: 8090
+      dnsPolicy: ClusterFirst
+      restartPolicy: Always
