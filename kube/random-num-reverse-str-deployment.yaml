@@ -1,0 +1,32 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: random-num-reverse-str
+  name: random-num-reverse-str-deployment
+spec:
+  replicas: 5
+  selector:
+    matchLabels:
+      app: random-num-reverse-str
+  strategy:
+    rollingUpdate:
+      maxSurge: 1
+      maxUnavailable: 1
+    type: RollingUpdate
+  template:
+    metadata:
+      labels:        
+        app: random-num-reverse-str
+    spec:
+      containers:
+      - image: random-num-reverse-str
+        imagePullPolicy: Never
+        name: random-num-reverse-str
+        ports:
+        - containerPort: 8080
+        env:
+        - name: STRING_REVERSE_URI
+          value: http://string-reverse.default.svc.cluster.local
+      dnsPolicy: ClusterFirst
+      restartPolicy: Always

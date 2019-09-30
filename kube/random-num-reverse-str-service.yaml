@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: random-num-reverse-str-svc
+  labels: 
+    app: random-num-reverse-str
+spec:
+  selector:
+    app: random-num-reverse-str
+  sessionAffinity: None
+  ports:
+  - port: 8000
+    protocol: TCP
+    targetPort: 8080
+  type: LoadBalancer
