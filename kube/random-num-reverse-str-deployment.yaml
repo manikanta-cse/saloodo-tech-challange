@@ -4,6 +4,7 @@ metadata:
   labels:
     app: random-num-reverse-str
   name: random-num-reverse-str-deployment
+  namespace: default
 spec:
   replicas: 5
   selector:
