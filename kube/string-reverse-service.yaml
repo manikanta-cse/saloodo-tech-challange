@@ -6,7 +6,7 @@ metadata:
     app: string-reverse
 spec:
   selector:
-    app: string-reverse
+    app: string-reverse-svc
   ports:
   - port: 8090
     protocol: TCP
