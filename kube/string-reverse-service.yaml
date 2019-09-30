@@ -1,0 +1,14 @@
+apiVersion: apps/v1
+kind: Service
+metadata:
+  name: string-reverse
+  labels: 
+    app: string-reverse
+spec:
+  selector:
+    app: string-reverse
+  ports:
+  - port: 8090
+    protocol: TCP
+    nodePort: 30001
+  type: LoadBalancer

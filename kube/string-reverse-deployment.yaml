@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   labels:
     app.kubernetes.io/name: load-balancer-example
-  name: reverse-string
+  name: string-reverse-deployment
 spec:
   replicas: 5
   selector:
@@ -13,10 +13,11 @@ spec:
     metadata:
       labels:
         app.kubernetes.io/name: load-balancer-example
+        app: string-reverse-svc
     spec:
       containers:
-      - image: reverse-string
+      - image: string-reverse
         imagePullPolicy: Never
-        name: reverse-string
+        name: string-reverse
         ports:
         - containerPort: 8090
