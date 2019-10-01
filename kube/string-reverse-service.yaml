@@ -10,5 +10,7 @@ spec:
     app: string-reverse
   sessionAffinity: None
   ports:
-  - port: 8090    
+  - port: 80
+    protocol: TCP
+    targetPort: 8080
   type: ClusterIP
