@@ -5,8 +5,8 @@ async function get(app, envConfig) {
     app.use(bodyParser.urlencoded({ extended: true }));
     app.use(bodyParser.json());
 
-    app.listen(envConfig['app_port'], '0.0.0.0');
-    console.log(`Server started , Running on ${envConfig['app_port']}`);
+    app.listen(process.env.PORT || 8080, '0.0.0.0');
+    console.log(`Server started , Running on ${process.env.PORT}`);
 
 };
 

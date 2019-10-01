@@ -2,7 +2,7 @@ const axios = require("axios");
 
 async function get(envConfig) {
 
-    var reverseStringApiUrl = envConfig['reverseStringApiUrl'];
+    var stringReverseApiUrl = process.env.STRING_REVERSE_API_BASE_URI + "/api/string/reverse";
 
     async function get(req, res, next) {
 
@@ -31,7 +31,7 @@ async function get(envConfig) {
     }
 
     async function reverseAString(inputString) {
-        const response = await axios.get(`${reverseStringApiUrl}/${inputString}`);
+        const response = await axios.get(`${stringReverseApiUrl}/${inputString}`);
         return response.data['message'];
     };
 

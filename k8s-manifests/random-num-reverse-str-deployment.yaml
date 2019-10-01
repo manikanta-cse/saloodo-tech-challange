@@ -27,7 +27,7 @@ spec:
         ports:
         - containerPort: 8080
         env:
-        - name: STRING_REVERSE_URI
+        - name: STRING_REVERSE_API_BASE_URI
           value: http://string-reverse.default.svc.cluster.local
       dnsPolicy: ClusterFirst
       restartPolicy: Always
