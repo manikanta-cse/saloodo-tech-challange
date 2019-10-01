@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   labels:
     app: string-reverse
-  name: string-reverse
+  name: string-reverse-deployment
   namespace: default
 spec:
   replicas: 5
