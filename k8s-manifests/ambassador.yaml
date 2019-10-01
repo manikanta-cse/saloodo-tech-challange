@@ -55,6 +55,9 @@ kind: Deployment
 metadata:
   name: ambassador
 spec:
+  selector:
+    matchLabels:
+      service: ambassador
   replicas: 3
   template:
     metadata:
@@ -103,6 +106,8 @@ metadata:
   name: ambassador
 spec:
   type: LoadBalancer
+  externalIPs:
+  - 10.0.1.5
   ports:
   - name: ambassador
     port: 80
