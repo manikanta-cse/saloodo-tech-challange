@@ -1,7 +1,7 @@
 {
   "name": "random-num-reverse-str-service",
   "version": "1.0.0",
-  "description": "",
+  "description": "an microservice which reverse the string and return an random number",
   "main": "server.js",
   "scripts": {
     "start": "node src/server.js"
