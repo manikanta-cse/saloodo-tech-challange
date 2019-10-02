@@ -3,7 +3,9 @@ let chaiHttp = require('chai-http');
 let server = require('../src/server');
 let should = chai.should();
 
+
 chai.use(chaiHttp);
+
 
 describe('/GET health', () => {
     it('it should get health status', (done) => {
@@ -18,3 +20,4 @@ describe('/GET health', () => {
             });
     });
 });
+
