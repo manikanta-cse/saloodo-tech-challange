@@ -50,5 +50,15 @@ describe('/GET string reverse', () => {
             });
     });
 
+    it('it should throw an error of bad request when an non string passed', (done) => {
+        chai.request(server)
+            .get('/api/string/reverse/124')
+            .end((err, res) => {
+                res.should.have.status(400);
+                res.body.should.be.a('object');
+                done();
+            });
+    });
+
 
 });

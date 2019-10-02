@@ -1,4 +1,5 @@
 const axios = require("axios");
+var validator = require('validator');
 
 async function get(envConfig) {
 
@@ -7,7 +8,9 @@ async function get(envConfig) {
     async function get(req, res, next) {
 
         if (!isInputValid(req)) {
-            res.status(400).send({ message: "Bad input" });
+            res.status(400).send({ message: "Bad input, only strings are allowed (without spaces)" });
+            return;
+
         }
 
         try {
@@ -22,9 +25,10 @@ async function get(envConfig) {
 
     };
 
-    async function isInputValid(req) {
-        return req.params["input"];
+    function isInputValid(req) {
+        return validator.isAlpha(req.params["input"]);
     }
+
 
     async function generateRandomNumber() {
         return Number(Math.random().toFixed(2));
