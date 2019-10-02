@@ -28,14 +28,15 @@ describe('/GET string reverse', () => {
             });
     });
 
-    it('it should return an error when an dependent svc is unreachable', (done) => {
+    it('it should not throw an error when an dependent svc (string reverse) is unreachable/down', (done) => {
 
         chai.request(server)
             .get('/api/string/reverse/hello')
             .end((err, res) => {
-                res.should.have.status(500);
+                res.should.have.status(200);
                 res.body.should.be.a('object');
                 res.body.should.have.property('message');
+                res.body.should.have.property('random');
                 done();
             });
     });
