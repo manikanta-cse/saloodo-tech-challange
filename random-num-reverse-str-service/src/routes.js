@@ -3,7 +3,7 @@ var health = require('./controllers/health');
 
 async function get(app, envConfig) {
 
-    var reverseString = require('./controllers/random-num-str-reverse').get(envConfig);
+    var reverseString = await require('./controllers/random-num-str-reverse').get(envConfig);
     app.get('/api/string/reverse/:input', reverseString.get);
     app.get('/health', health.get);
 
