@@ -114,9 +114,3 @@ spec:
     targetPort: 80
   selector:
     service: ambassador
----
-apiVersion: ambassador/v0
-kind: Mapping
-name: catch-all
-prefix: /
-service: ambassador
