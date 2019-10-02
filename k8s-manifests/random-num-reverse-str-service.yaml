@@ -8,9 +8,16 @@ metadata:
       ---
       apiVersion: ambassador/v0
       kind:  Mapping
-      name:  ran-num-rev-str-svc-mapping
+      name:  ran-num-rev-str-svc_mapping
       prefix: /reverse/
       rewrite: /api/string/reverse/
+      service: random-num-reverse-str
+    getambassador.io/config: |
+      ---
+      apiVersion: ambassador/v1
+      kind:  Mapping
+      name:  catch-all
+      prefix: /      
       service: random-num-reverse-str
   labels: 
     app: random-num-reverse-str
