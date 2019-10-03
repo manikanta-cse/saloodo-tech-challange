@@ -1,10 +1,9 @@
 var health = require('./controllers/health');
+var stringReverse = require('./controllers/random-num-str-reverse');
 
+async function get(app) {
 
-async function get(app, envConfig) {
-
-    var reverseString = await require('./controllers/random-num-str-reverse').get(envConfig);
-    app.get('/api/string/reverse/:input', reverseString.get);
+    app.get('/api/string/reverse/:input', stringReverse.get);
     app.get('/health', health.get);
 
     app.all('/api/*', function (req, resp) {

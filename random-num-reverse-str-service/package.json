@@ -4,7 +4,7 @@
   "description": "an microservice which reverse the string and return an random number",
   "main": "server.js",
   "scripts": {
-    "start": "node src/server.js",
+    "start": "node src/main.js",
     "test": "export STRING_REVERSE_API_BASE_URI=http://localhost:8090 && mocha"
   },
   "keywords": [],

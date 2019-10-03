@@ -1,10 +1,10 @@
 var health = require('./controllers/health');
-
+var stringReverse = require('./controllers/string-reverse');
 
 async function get(app) {
 
-    var reverseString = await require('./controllers/string-reverse');
-    app.get('/api/string/reverse/:input', reverseString.get);
+
+    app.get('/api/string/reverse/:input', stringReverse.get);
     app.get('/health', health.get);
 
     app.all('/api/*', function (req, resp) {

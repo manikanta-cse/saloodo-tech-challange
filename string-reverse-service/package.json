@@ -4,7 +4,7 @@
   "description": "an microservice which reverse the string",
   "main": "server.js",
   "scripts": {
-    "start": "node src/server.js",
+    "start": "node src/main.js",
     "test": "mocha"
   },
   "keywords": [],

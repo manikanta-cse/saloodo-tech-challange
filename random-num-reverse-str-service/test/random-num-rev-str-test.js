@@ -1,7 +1,7 @@
 
 let chai = require('chai');
 let chaiHttp = require('chai-http');
-let server = require('../src/server');
+let server = require('../src/main');
 const nock = require('nock');
 
 chai.use(chaiHttp);

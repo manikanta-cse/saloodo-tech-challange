@@ -1,6 +1,6 @@
 var bodyParser = require('body-parser');
 
-async function get(app, envConfig) {
+function get(app) {
 
     app.use(bodyParser.urlencoded({ extended: true }));
     app.use(bodyParser.json());
