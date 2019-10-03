@@ -11,7 +11,7 @@ It has two services
 User would hit the Microservice-1 and it will delegate the task of string reverse to Microservice-2. Finally it aggregates the data and gives response with random number and reversed string for a given input
 
 
-To perform build and deploy,do a git clone and change your working directory to root project directory and run the below commands
+To perform build and deploy or local setup,do a git clone and change your working directory to root project directory and run the below commands
 
 ```bash
 cd saloodo-tech-challenge
