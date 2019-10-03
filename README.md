@@ -2,7 +2,7 @@
 
 A project to demonstrate building microservices and deploying to k8ns
 
-To perform build and deploy,change your working directory to root project directory and run the below commands
+To perform build and deploy,do a git clone and change your working directory to root project directory and run the below commands
 
 ```bash
 cd saloodo-tech-challenge
