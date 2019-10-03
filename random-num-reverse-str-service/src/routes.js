@@ -3,7 +3,7 @@ var stringReverse = require('./controllers/random-num-str-reverse');
 
 async function get(app) {
 
-    app.get('/api/string/reverse/:input', stringReverse.get);
+    app.get('/api/string/reverse/:input/random/number', stringReverse.get);
     app.get('/health', health.get);
 
     app.all('/api/*', function (req, resp) {

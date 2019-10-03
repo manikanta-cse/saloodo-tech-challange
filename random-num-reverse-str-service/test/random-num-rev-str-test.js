@@ -17,7 +17,7 @@ describe('/GET string reverse', () => {
             .get('/api/string/reverse/hello')
             .reply(200, ApiResponse);
         chai.request(server)
-            .get('/api/string/reverse/hello')
+            .get('/api/string/reverse/hello/random/number')
             .end((err, res) => {
                 res.should.have.status(200);
                 res.body.should.be.a('object');
@@ -31,7 +31,7 @@ describe('/GET string reverse', () => {
     it('it should not throw an error when an dependent svc (string reverse) is unreachable/down', (done) => {
 
         chai.request(server)
-            .get('/api/string/reverse/hello')
+            .get('/api/string/reverse/hello/random/number')
             .end((err, res) => {
                 res.should.have.status(200);
                 res.body.should.be.a('object');
@@ -43,7 +43,7 @@ describe('/GET string reverse', () => {
 
     it('it should throw an error when an input wasnt passed', (done) => {
         chai.request(server)
-            .get('/api/string/reverse')
+            .get('/api/string/reverse/')
             .end((err, res) => {
                 res.should.have.status(404);
                 res.body.should.be.a('object');
@@ -53,7 +53,7 @@ describe('/GET string reverse', () => {
 
     it('it should throw an error of bad request when an non string passed', (done) => {
         chai.request(server)
-            .get('/api/string/reverse/124')
+            .get('/api/string/reverse/124/random/number')
             .end((err, res) => {
                 res.should.have.status(400);
                 res.body.should.be.a('object');
