@@ -16,5 +16,5 @@ if [[ $docker_version == *"build"* ]]; then
    echo "docker build is done"
 else
     echo  "docker not found on machine, so exiting!"
-    exit 0
+    exit 1
 fi
