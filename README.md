@@ -8,6 +8,13 @@ To perform build and deploy,change your working directory to root project direct
 cd saloodo-tech-challenge
 ```
 
+## Tests
+
+```bash
+cd random-num-reverse-str-service/ && npm test
+cd string-reverse-service/ && npm test
+```
+
 ## Build
 
 ```bash
