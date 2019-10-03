@@ -28,7 +28,7 @@ Navigate to localhost:8090/api/string/reverse/${inputString} to access API
 
 Set an an environmental varaible, which will be required by below service to communicate for reverse string task delegation
 ```bash
-export STRING_REVERSE_API_BASE_URI=localhost:8080
+export STRING_REVERSE_API_BASE_URI=localhost:8090
 ```
 
 ```bash
