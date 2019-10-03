@@ -1,6 +1,6 @@
 # Saloodo Tech Challenge
 
-A project to demonstrate building microservices and deploying to k8ns
+A demonstration on building microservices and deploying to k8ns
 
 It has two services
 ```
