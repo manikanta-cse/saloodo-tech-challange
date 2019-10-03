@@ -75,6 +75,10 @@ sh build.sh
 ```bash
 sh deploy.sh
 ```
+## API Route
+```bash
+/api/string/reverse/{inputString}/random/number
+```
 
 ## Notes on implementation
 - Choosen Node JS as a runtime to build Restful microservices
