@@ -24,7 +24,7 @@ Require Node JS Insatll with version -10.15.3
 cd string-reverse-service
 npm install && npm start
 ```
-Navigate to localhost:8080/api/string/reverse/${inputString} to access API
+Navigate to localhost:8090/api/string/reverse/${inputString} to access API
 
 Set an an environmental varaible, which will be required by below service to communicate for reverse string task delegation
 ```bash
@@ -35,7 +35,7 @@ export STRING_REVERSE_API_BASE_URI=localhost:8090
 cd random-num-reverse-str-service
 npm install && npm start
 ```
-Navigate to localhost:8090/api/string/reverse/${inputString} to access API
+Navigate to localhost:8080/api/string/reverse/${inputString}/random/number to access API
 
 ## Local Environment Setup (Dockerized Version)
 
@@ -75,6 +75,10 @@ sh build.sh
 ```bash
 sh deploy.sh
 ```
+## API Route
+```bash
+/api/string/reverse/{inputString}/random/number
+```
 
 ## Notes on implementation
 - Choosen Node JS as a runtime to build Restful microservices
@@ -82,5 +86,5 @@ sh deploy.sh
 - Used Circuit Breaker for fault tolerance
 - Added couple of end to end tests
 - Used Minikube (cent os) as a container orchestrator
-- Used API Gateway to route the traffic
+- Used API Gateway
 
