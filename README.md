@@ -86,5 +86,5 @@ sh deploy.sh
 - Used Circuit Breaker for fault tolerance
 - Added couple of end to end tests
 - Used Minikube (cent os) as a container orchestrator
-- Used API Gateway to route the traffic
+- Used API Gateway
 
